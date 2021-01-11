@@ -99,6 +99,23 @@ for (int i = maxLength - 1; i >= 0; i--) {
 
 크게 두가지와 여러 문제들이 있는 것 같다.
 
+일단 `answer = answer + String.valueOf(num[0][k]);`
+의 연산을 StringBuilder로 바꾸어 주었다.
+
+```java
+// String answer = "";
+StringBuilder sb = new StringBuilder();
+
+// answer = answer + String.valueOf(num[0][k]);
+sb.append(String.valueOf(num[0][k]));
+```
+
+![2](https://user-images.githubusercontent.com/45132207/104228881-cdd04600-548e-11eb-94b5-2ec25815ad6b.PNG)
+
+처음 자바 코드 문제를 풀면서 scanf를 buffer로 사용하였을 때 만큼 메모리와 수행시간이 줄어 들었다.
+
+포문이 많긴 하지만 실제로 수행하는데에는 큰 차이가 없는 수준이어서 StringBuilder 하나만으로 시간은 많이 단축 시켰다.
+
 
 
 
