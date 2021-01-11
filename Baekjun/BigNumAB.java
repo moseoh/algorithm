@@ -7,7 +7,8 @@ public class BigNumAB {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str[] = br.readLine().split(" ");
-        String answer = "";
+        // String answer = "";
+        StringBuilder sb = new StringBuilder();
 
         int maxLength = str[0].length() > str[1].length() ? str[0].length() : str[1].length();
         maxLength += 1;
@@ -37,12 +38,13 @@ public class BigNumAB {
                 continue;
             else {
                 for (int k = i; k >= 0; k--) {
-                    answer = answer + String.valueOf(num[0][k]);
+                    // answer = answer + String.valueOf(num[0][k]);
+                    sb.append(String.valueOf(num[0][k]));
                 }
                 break;
             }
         }
 
-        System.out.println(answer);
+        System.out.println(sb);
     }
 }
