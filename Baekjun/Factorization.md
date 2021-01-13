@@ -62,23 +62,26 @@ public class Factorization {
 
 ![1](https://user-images.githubusercontent.com/45132207/104457902-fa4ea400-55ed-11eb-8f7b-36442f375559.PNG)
 
-# 3. 문제점🚨
+# 3. 더 풀어 보기🚨
 
 리스트보다 저번에 했던 스트링 빌더로 표현해보았다.
 
 ```java
-// String answer = "";
+// List list = new ArrayList<Integer>();
 StringBuilder sb = new StringBuilder();
 
-// answer = answer + String.valueOf(num[0][k]);
-sb.append(String.valueOf(num[0][k]));
+// list.add(temp);
+sb.append(temp).append("\n");
+
+// for (int i = 0; i < list.size(); i++) {
+// System.out.println(list.get(i));
+// }
+System.out.println(sb);
 ```
 
 ![2](https://user-images.githubusercontent.com/45132207/104228881-cdd04600-548e-11eb-94b5-2ec25815ad6b.PNG)
 
-처음 자바 코드 문제를 풀면서 scanf를 buffer로 사용하였을 때 만큼 메모리와 수행시간이 줄어 들었다.
-
-포문이 많긴 하지만 실제로 수행하는데에는 큰 차이가 없는 수준이어서 StringBuilder 하나만으로 시간은 많이 단축 시켰다.
+비슷한 결과를 얻을 수 있다.
 
 
 

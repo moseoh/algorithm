@@ -18,17 +18,15 @@ public class Factorization {
 
     static void factorization(int num) {
         int temp = 2;
-        List list = new ArrayList<Integer>();
+        StringBuilder sb = new StringBuilder();
         while (num != 1) {
             if (num % temp == 0) {
-                list.add(temp);
+                sb.append(temp).append("\n");
                 num /= temp;
             } else {
                 temp++;
             }
         }
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
+        System.out.println(sb);
     }
 }
