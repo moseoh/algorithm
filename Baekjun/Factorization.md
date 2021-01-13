@@ -1,8 +1,6 @@
 문제에 대한 설명
-<!--
-프로그래머스 -> 코딩테스트 고득점 Kit -> 힙(Heap) - 더 맵계(Level2)에 대한 연습입니다.
--->
-백준 -> 기본 수학 2 -> [11653 소인수분해](https://www.acmicpc.net/problem/11653)에 대한 연습입니다.
+
+백준 -> 기본 수학 2 -> <a href="https://www.acmicpc.net/problem/11653" target="_blank">11653 소인수분해</a>에 대한 연습입니다.
 
 # 1. 문제 읽기
  
@@ -82,3 +80,6 @@ System.out.println(sb);
 ![2](https://user-images.githubusercontent.com/45132207/104458994-75fd2080-55ef-11eb-8aa2-37e41e4a91c9.PNG)
 
 비슷한 결과를 얻을 수 있다.
+
+---
+<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/Factorization.java" target="_blank">전체 코드</a>

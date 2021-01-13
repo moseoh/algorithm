@@ -1,6 +1,8 @@
 문제에 대한 설명
 
-백준 -> 기본 수학 1 -> [2447 별 찍기 - 10](https://www.acmicpc.net/problem/2447)에 대한 연습입니다.
+백준 -> 기본 수학 1 -> <a href="https://www.acmicpc.net/problem/2447" target="_blank">2447 별 찍기 - 10</a>에 대한 연습입니다.
+
+
 
 # 1. 문제 읽기
  
@@ -175,4 +177,4 @@ bw.flush();
 빠른 분들의 코드를 봤지만 큰 구현방법은 비슷한 것 같고 세세하게는 내가 이해할 수 없어 여기서 이번문제는 마무리 할게용
 
 ---
-[전체 코드](https://github.com/azqazq195/coding_teset/blob/master/Baekjun/DrawStar_10.java)
+<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/DrawStar_10.java" target="_blank">전체 코드</a>
