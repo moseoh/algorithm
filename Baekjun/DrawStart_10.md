@@ -175,4 +175,4 @@ bw.flush();
 빠른 분들의 코드를 봤지만 큰 구현방법은 비슷한 것 같고 세세하게는 내가 이해할 수 없어 여기서 이번문제는 마무리 할게용
 
 ---
-[전체 코드]()
+[전체 코드](https://github.com/azqazq195/coding_teset/blob/master/Baekjun/DrawStar_10.java)
