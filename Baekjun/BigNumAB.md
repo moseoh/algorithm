@@ -4,7 +4,7 @@
 <!--
 프로그래머스 -> 코딩테스트 고득점 Kit -> 힙(Heap) - 더 맵계(Level2)에 대한 연습입니다.
 -->
-백준 -> 기본 수학 1 -> [큰 수 A+B](https://www.acmicpc.net/problem/10757)에 대한 연습입니다.
+백준 -> 기본 수학 1 -> [10757 큰 수 A+B](https://www.acmicpc.net/problem/10757)에 대한 연습입니다.
 
 # 1. 문제 읽기
  
@@ -115,10 +115,3 @@ sb.append(String.valueOf(num[0][k]));
 처음 자바 코드 문제를 풀면서 scanf를 buffer로 사용하였을 때 만큼 메모리와 수행시간이 줄어 들었다.
 
 포문이 많긴 하지만 실제로 수행하는데에는 큰 차이가 없는 수준이어서 StringBuilder 하나만으로 시간은 많이 단축 시켰다.
-
-
-
-
-
-
-
