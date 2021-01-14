@@ -94,4 +94,4 @@ while (temp != 0) {
 ![3](https://user-images.githubusercontent.com/45132207/104535633-e6408c00-5659-11eb-92fe-24d678910a37.PNG)
 
 ---
-<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/DrawStar_10.java" target="_blank">전체 코드</a>
+<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/Decomposition.java" target="_blank">전체 코드</a>
