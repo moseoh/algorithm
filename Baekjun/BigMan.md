@@ -1,7 +1,3 @@
-
-
-
-
 문제에 대한 설명
 
 백준 -> 브루트 포스 -> <a href="https://www.acmicpc.net/problem/7568" target="_blank">7568 덩치</a>에 대한 연습입니다.
