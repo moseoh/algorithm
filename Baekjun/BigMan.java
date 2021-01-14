@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 public class BigMan {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         int num = Integer.parseInt(br.readLine());
         int mans[][] = new int[num][2];
         int ranks[] = new int[num];
@@ -28,7 +29,8 @@ public class BigMan {
         }
 
         for (int i : ranks) {
-            System.out.print(i + " ");
+            sb.append(i).append(" ");
         }
+        System.out.println(sb);
     }
 }

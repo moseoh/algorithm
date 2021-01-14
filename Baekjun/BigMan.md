@@ -21,13 +21,6 @@
 ### 풀이 과정
 
 ```java
-int maxLength = str[0].length() > str[1].length() ? str[0].length() : str[1].length();
-maxLength += 1;
-int num[][] = new int[2][maxLength];
-```
-
-
-```java
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 int num = Integer.parseInt(br.readLine());
 int mans[][] = new int[num][2];
@@ -62,6 +55,18 @@ for (int i : ranks) {
 # 3. 더 풀어 보기🚨
 
 괜찮은 수행시간이 나왔으니 패스
+굳이하자면 또 까먹은 StringBuilder
+
+```java
+for (int i : ranks) {
+    sb.append(i).append(" ");
+}
+System.out.println(sb);
+```
+
+![2](https://user-images.githubusercontent.com/45132207/104540671-438d0b00-5663-11eb-8205-cc336cef5b54.PNG)
+
+문자열을 합치는 것이 아닌 단순 출력이라 그런지 수행시간은 같다.
 
 ---
-<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/BigNumAB.java" target="_blank">전체 코드</a>
+<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/BigMan.java" target="_blank">전체 코드</a>
