@@ -117,4 +117,4 @@ W로 시작했다면 두번째 줄은 B로 시작한다.
 깔끔하게 정리해야 좋은 개발자겠지만 오늘은 일단 도망
 
 ---
-<a href="https://github.com/azqazq195/coding_teset/blob/master/Baekjun/Factorization.java" target="_blank">전체 코드</a>
+<a href="https://github.com/azqazq195/coding_teset/blob/master/src.Baekjun/RepaintChessBoard.java" target="_blank">전체 코드</a>
