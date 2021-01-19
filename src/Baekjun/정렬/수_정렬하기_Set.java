@@ -4,24 +4,21 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class 수_정렬하기 {
+public class 수_정렬하기_Set {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
 
-        int[] arr = new int[N];
+        Set<Integer> set = new TreeSet<Integer>();
 
         for (int i = 0; i < N; i++) {
-            arr[i] = Integer.parseInt(br.readLine());
+            set.add(Integer.parseInt(br.readLine()));
         }
 
-        Arrays.sort(arr);
-
-        for(int i : arr) {
-            sb.append(i).append("\n");
+        for (Integer integer : set) {
+            sb.append(integer).append("\n");
         }
-
         System.out.println(sb);
     }
 }
