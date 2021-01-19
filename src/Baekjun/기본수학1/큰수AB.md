@@ -115,4 +115,4 @@ sb.append(String.valueOf(num[0][k]));
 포문이 많긴 하지만 실제로 수행하는데에는 큰 차이가 없는 수준이어서 StringBuilder 하나만으로 시간은 많이 단축 시켰다.
 
 ---
-<a href="https://github.com/azqazq195/coding_teset/blob/master/src.Baekjun/BigNumAB.java" target="_blank">전체 코드</a>
+<a href="https://github.com/azqazq195/Coding-Test/tree/master/src/Baekjun/기본수학1/큰수AB.java" target="_blank">전체 코드</a>
