@@ -2,24 +2,23 @@ package src.Baekjun.정렬;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.*;
 
-public class 수_정렬하기_2 {
+public class 수_정렬하기_2_Set {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
-        int range = 2000001;
 
-        boolean[] num = new boolean[range];
+        Set<Integer> set = new TreeSet<Integer>();
 
         for (int i = 0; i < N; i++) {
-            num[Integer.parseInt(br.readLine()) + 1000000] = true;
+            set.add(Integer.parseInt(br.readLine()));
         }
 
-        for (int i = 0; i < range; i++) {
-            if(num[i]) sb.append(i - 1000000).append("\n");
+        for (Integer integer : set) {
+            sb.append(integer).append("\n");
         }
-
         System.out.println(sb);
     }
 }
