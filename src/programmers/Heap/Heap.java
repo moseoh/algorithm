@@ -1,4 +1,4 @@
-package src.Programmers.Heap;
+package src.programmers.Heap;
 
 import java.util.Random;
 

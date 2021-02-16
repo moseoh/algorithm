@@ -1,4 +1,4 @@
-package src.Programmers;
+package src.programmers;
 
 public class BiggestNum {
     public static void main(String[] args) {

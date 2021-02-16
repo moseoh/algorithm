@@ -1,4 +1,4 @@
-package src.Baekjun.브루트_포스;
+package src.baekjun.브루트_포스;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

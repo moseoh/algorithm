@@ -1,4 +1,4 @@
-package src.Baekjun.브루트_포스
+package src.baekjun.브루트_포스
 
 fun main() {
     val N = readLine()!!.toInt()

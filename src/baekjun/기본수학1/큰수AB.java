@@ -1,4 +1,4 @@
-package src.Baekjun.기본수학1;
+package src.baekjun.기본수학1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

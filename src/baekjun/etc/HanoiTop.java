@@ -1,4 +1,4 @@
-package src.Baekjun.etc;
+package src.baekjun.etc;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

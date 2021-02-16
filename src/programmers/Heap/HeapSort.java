@@ -1,4 +1,4 @@
-package src.Programmers.Heap;
+package src.programmers.Heap;
 
 public class HeapSort {
     private static int number = 10;

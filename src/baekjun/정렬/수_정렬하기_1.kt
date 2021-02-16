@@ -1,4 +1,4 @@
-package src.Baekjun.정렬
+package src.baekjun.정렬
 
 import java.util.*
 

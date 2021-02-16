@@ -1,4 +1,4 @@
-package src.Baekjun.기본수학2;
+package src.baekjun.기본수학2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

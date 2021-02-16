@@ -1,4 +1,4 @@
-package src.Baekjun.재귀;
+package src.baekjun.재귀;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
