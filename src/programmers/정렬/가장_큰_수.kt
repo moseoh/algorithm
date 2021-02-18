@@ -1,4 +1,4 @@
-package src.programmers.sort
+package src.programmers.정렬
 
 import java.lang.StringBuilder
 import java.util.Collections
