@@ -1,4 +1,4 @@
-package Level2;
+package src.programmers.Level2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,54 +34,54 @@ public class 스킬트리 {
 
         new Solution2().solution(skill, skill_trees);
     }
-}
 
-class Solution {
-    public int solution(String skill, String[] skill_trees) {
-        int answer = 0;
+    static class Solution {
+        public int solution(String skill, String[] skill_trees) {
+            int answer = 0;
 
-        for (String skill_tree : skill_trees) {
-            List<Integer> index = new ArrayList<>();
+            for (String skill_tree : skill_trees) {
+                List<Integer> index = new ArrayList<>();
 
-            for (int k = 0; k < skill_tree.length(); k++) {
-                for (int n = 0; n < skill.length(); n++) {
-                    if (skill.charAt(n) == skill_tree.charAt(k)) {
-                        index.add(n);
+                for (int k = 0; k < skill_tree.length(); k++) {
+                    for (int n = 0; n < skill.length(); n++) {
+                        if (skill.charAt(n) == skill_tree.charAt(k)) {
+                            index.add(n);
+                        }
                     }
                 }
-            }
-            for (int x : index) {
-                System.out.print(x + "\t");
-            }
-            System.out.println();
+                for (int x : index) {
+                    System.out.print(x + "\t");
+                }
+                System.out.println();
 
-            if (index.size() == 0) answer++;
-            else {
-                for (int x = 0; x < index.size(); x++) {
-                    if (index.get(x) != x) break;
-                    if (x == index.size() - 1) answer++;
+                if (index.size() == 0) answer++;
+                else {
+                    for (int x = 0; x < index.size(); x++) {
+                        if (index.get(x) != x) break;
+                        if (x == index.size() - 1) answer++;
+                    }
+                }
+
+            }
+
+            System.out.println("answer: " + answer);
+            return answer;
+        }
+    }
+
+    static class Solution2 {
+        public int solution(String skill, String[] skill_trees) {
+            int answer = 0;
+            ArrayList<String> skillTrees = new ArrayList<>(Arrays.asList(skill_trees));
+            Iterator<String> it = skillTrees.iterator();
+            while (it.hasNext()) {
+                if (skill.indexOf(it.next().replaceAll("[^" + skill + "]", "")) != 0) {
+                    it.remove();
                 }
             }
-
+            answer = skillTrees.size();
+            System.out.println("answer: " + answer);
+            return answer;
         }
-
-        System.out.println("answer: " + answer);
-        return answer;
-    }
-}
-
-class Solution2 {
-    public int solution(String skill, String[] skill_trees) {
-        int answer = 0;
-        ArrayList<String> skillTrees = new ArrayList<>(Arrays.asList(skill_trees));
-        Iterator<String> it = skillTrees.iterator();
-        while (it.hasNext()) {
-            if (skill.indexOf(it.next().replaceAll("[^" + skill + "]", "")) != 0) {
-                it.remove();
-            }
-        }
-        answer = skillTrees.size();
-        System.out.println("answer: " + answer);
-        return answer;
     }
 }

@@ -1,4 +1,4 @@
-package 스킬체크2;
+package src.programmers.스킬체크2;
 
 public class Second {
     public static void main(String[] args) {
