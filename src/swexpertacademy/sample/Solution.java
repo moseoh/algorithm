@@ -1,4 +1,4 @@
-package src.swexpertacademy.다른문제;
+package src.swexpertacademy.sample;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
