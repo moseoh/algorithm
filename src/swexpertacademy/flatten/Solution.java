@@ -1,4 +1,4 @@
-package src.swexpertacademy.문제.flatten;
+package src.swexpertacademy.flatten;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 class Solution {
     public static void main(String args[]) throws Exception {
-        System.setIn(new FileInputStream("src/swexpertacademy/문제/flatten/input.txt"));
+        System.setIn(new FileInputStream("src/swexpertacademy/flatten/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         for (int test_case = 1; test_case <= 10; test_case++) {
             int[] num = new int[101];

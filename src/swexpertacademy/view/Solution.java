@@ -1,4 +1,4 @@
-package src.swexpertacademy.문제.view;
+package src.swexpertacademy.view;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 
 class Solution {
     public static void main(String args[]) throws Exception {
-        System.setIn(new FileInputStream("src/swexpertacademy/문제/view/input.txt"));
+        System.setIn(new FileInputStream("src/swexpertacademy/view/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // 0 0 5 4 7 8 2 0 0
         // 0 0 0 0 0 1 0 0 0

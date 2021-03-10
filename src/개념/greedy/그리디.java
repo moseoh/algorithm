@@ -1,4 +1,4 @@
-package src.concept;
+package src.개념.greedy;
 
 import java.io.BufferedReader;
 import java.io.IOException;

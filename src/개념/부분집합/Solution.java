@@ -1,4 +1,4 @@
-package src.swexpertacademy.개념.부분집합;
+package src.개념.부분집합;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 class Solution {
     public static void main(String args[]) throws Exception {
-        System.setIn(new FileInputStream("src/swexpertacademy/개념/부분집합/input.txt"));
+        System.setIn(new FileInputStream("src/개념/부분집합/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         for (int test_case = 1; test_case <= 2; test_case++) {

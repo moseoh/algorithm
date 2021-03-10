@@ -1,4 +1,4 @@
-package src.swexpertacademy.문제.최빈수구하기;
+package src.swexpertacademy.최빈수구하기;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 
 class Solution {
     public static void main(String args[]) throws Exception {
-        System.setIn(new FileInputStream("src/swexpertacademy/문제/최빈수구하기/input.txt"));
+        System.setIn(new FileInputStream("src/swexpertacademy/최빈수구하기/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int T;
