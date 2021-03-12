@@ -11,8 +11,18 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         for (int test_case = 1; test_case <= 10; test_case++) {
             sb.append("#").append(test_case).append(" ");
-
-            sb.append("answer").append("\n");
+            br.readLine();
+            String search = br.readLine();
+            String string = br.readLine();
+            int count = 0;
+            int index = 0;
+            while(index != -1){
+                index = string.indexOf(search);
+                if(index == -1) break;
+                string = string.substring(index + search.length() - 1);
+                count++;
+            }
+            sb.append(count).append("\n");
         }
         System.out.println(sb);
     }
