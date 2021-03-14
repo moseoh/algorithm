@@ -7,7 +7,11 @@ public class Temp {
         Stack<Integer> stack = new Stack<>();
         stack.push(1);
         System.out.println(stack.pop());
-        System.out.println(stack.size());
-        System.out.println(stack.isEmpty());
+        try {
+            System.out.println(stack.pop());
+        } catch (Exception e){
+            System.out.println("에러");
+        }
+        
     }
 }
