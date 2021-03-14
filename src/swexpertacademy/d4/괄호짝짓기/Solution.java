@@ -11,7 +11,9 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         for (int test_case = 1; test_case <= 10; test_case++) {
             sb.append("#").append(test_case).append(" ");
-
+            int length = Integer.parseInt(br.readLine());
+            String[] string = br.readLine().split("");
+            
             sb.append("answer").append("\n");
         }
         System.out.println(sb);
