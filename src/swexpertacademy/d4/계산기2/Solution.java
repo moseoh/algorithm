@@ -26,9 +26,7 @@ class Solution {
 
             setOperatorPriority();
             toPostfixNotation();
-
-            sb.append("\n").append(postfixNotation).append("\n");
-
+            
             sb.append(runCalculatePostfixNotation()).append("\n");
         }
         System.out.println(sb);
