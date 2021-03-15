@@ -27,20 +27,19 @@ class Solution {
             setOperatorPriority();
             toPostfixNotation();
 
-            sb.append("\n").append(postfixNotation).append("\n");
-
             sb.append(runCalculatePostfixNotation()).append("\n");
         }
         System.out.println(sb);
     }
 
     static void setOperatorPriority() {
-        operatorPriority.put('(', 0);
-        operatorPriority.put(')', 3);
         operatorPriority.put('+', 1);
         operatorPriority.put('-', 1);
         operatorPriority.put('*', 2);
         operatorPriority.put('/', 2);
+        operatorPriority.put('(', 3);
+        // 없어도 됨
+        operatorPriority.put(')', 3);
     }
 
     static void toPostfixNotation() {
@@ -51,18 +50,21 @@ class Solution {
                 postfixNotation.append(s);
             } else {
                 char operator = s.charAt(0);
-                if (!stack.isEmpty()) {
-                    // 기존에 있던 연산자보다 새로운 연산자의 우선순위가 낮으면
-                    while (true) {
-                        if(stack.isEmpty()) break;
-                        if(operatorPriority.get(stack.peek()) <= operatorPriority.get(operator)) break;
-                        if(operatorPriority.get(operator) == 3) {
-
-                        }
+                if(operator == ')'){
+                    while (stack.peek() != '(') {
                         postfixNotation.append(stack.pop());
                     }
+                    stack.pop();
+                } else {
+                    // 기존에 있던 연산자보다 새로운 연산자의 우선순위가 낮으면
+                    while (true) {
+                        if (stack.isEmpty()) break;
+                        if (operatorPriority.get(stack.peek()) <= operatorPriority.get(operator)) break;
+                        if (operatorPriority.get(stack.peek()) == 3) break;
+                        postfixNotation.append(stack.pop());
+                    }
+                    stack.push(operator);
                 }
-                stack.push(operator);
             }
         }
         while (!stack.isEmpty()) {
@@ -73,25 +75,25 @@ class Solution {
     static int runCalculatePostfixNotation() {
         Stack<Integer> stack = new Stack<>();
         String[] str = postfixNotation.toString().split("");
-        for (int i = 0; i < str.length; i++) {
-            if (str[i].matches("[0-9]")) stack.push(Integer.parseInt(str[i]));
+        for (String s : str) {
+            if (s.matches("[0-9]")) stack.push(Integer.parseInt(s));
             else {
-                char op = str[i].charAt(0);
+                char op = s.charAt(0);
                 int x = stack.pop();
                 int y = stack.pop();
 
                 switch (op) {
                     case '+':
-                        stack.push(x+y);
+                        stack.push(x + y);
                         break;
                     case '-':
-                        stack.push(x-y);
+                        stack.push(x - y);
                         break;
                     case '*':
-                        stack.push(x*y);
+                        stack.push(x * y);
                         break;
                     case '/':
-                        stack.push(x/y);
+                        stack.push(x / y);
                         break;
                 }
             }
