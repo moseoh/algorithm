@@ -51,13 +51,11 @@ class Solution {
                 postfixNotation.append(s);
             } else {
                 char operator = s.charAt(0);
-                if (!stack.isEmpty()) {
-                    // 기존에 있던 연산자보다 새로운 연산자의 우선순위가 낮으면
-                    while (true) {
-                        if(stack.isEmpty()) break;
-                        if(operatorPriority.get(stack.peek()) <= operatorPriority.get(operator)) break;
-                        postfixNotation.append(stack.pop());
-                    }
+                // 기존에 있던 연산자보다 새로운 연산자의 우선순위가 낮으면
+                while (true) {
+                    if (stack.isEmpty()) break;
+                    if (operatorPriority.get(stack.peek()) <= operatorPriority.get(operator)) break;
+                    postfixNotation.append(stack.pop());
                 }
                 stack.push(operator);
             }
@@ -79,16 +77,16 @@ class Solution {
 
                 switch (op) {
                     case '+':
-                        stack.push(x+y);
+                        stack.push(x + y);
                         break;
                     case '-':
-                        stack.push(x-y);
+                        stack.push(x - y);
                         break;
                     case '*':
-                        stack.push(x*y);
+                        stack.push(x * y);
                         break;
                     case '/':
-                        stack.push(x/y);
+                        stack.push(x / y);
                         break;
                 }
             }
