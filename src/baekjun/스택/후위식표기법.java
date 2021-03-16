@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class 후위식표기법 {
+    // in-stack precedence
     static HashMap<Character, Integer> isp;
 
     public static void main(String[] args) throws Exception {
@@ -35,11 +36,6 @@ public class 후위식표기법 {
                 postfix.append(ch);
                 continue;
             }
-            // 연산자가 없을 경우
-            if (stack.isEmpty()) {
-                stack.push(ch);
-                continue;
-            }
             if (ch == '(') {
                 stack.push(ch);
                 continue;
@@ -51,23 +47,14 @@ public class 후위식표기법 {
                 stack.pop();
                 continue;
             }
-            // 들어오는 연산자가 기존의 연산자보다 우선순위가 높을 경우
-            if (isp.get(ch) < isp.get(stack.peek())) {
-                stack.push(ch);
-                continue;
+            while (true) {
+                if (stack.isEmpty()) break;
+                if (isp.get(ch) < isp.get(stack.peek())) break;
+                postfix.append(stack.pop());
             }
-            // 들어오는 연산자가 기존의 연산자보다 우선순위가 낮거나 같은 경우
-            if (isp.get(ch) >= isp.get(stack.peek())) {
-                while (true) {
-                    if(stack.isEmpty()) break;
-                    if (isp.get(ch) < isp.get(stack.peek())) break;
-                    postfix.append(stack.pop());
-                }
-                stack.push(ch);
-            }
+            stack.push(ch);
         }
         while (!stack.isEmpty()) postfix.append(stack.pop());
-
         return postfix;
     }
 }
