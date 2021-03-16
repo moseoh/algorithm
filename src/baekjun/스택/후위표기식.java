@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Stack;
 
-public class 후위식표기법 {
+public class 후위표기식 {
     // in-stack precedence
     static HashMap<Character, Integer> isp;
 
