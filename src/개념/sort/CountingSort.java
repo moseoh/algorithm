@@ -1,4 +1,4 @@
-package src.개념.countingsort;
+package src.개념.sort;
 
 public class CountingSort {
     public static void main(String[] args) {

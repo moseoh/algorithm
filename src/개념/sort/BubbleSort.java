@@ -1,4 +1,4 @@
-package src.개념.bubblesort;
+package src.개념.sort;
 
 public class BubbleSort {
     public static void main(String[] args) {
