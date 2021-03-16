@@ -42,9 +42,9 @@ class Solution {
         operatorPriority.put(')', 3);
     }
 
+    // 중위표현식을 후위표현식으로 변환
     static void toPostfixNotation() {
         Stack<Character> stack = new Stack<>();
-        // 중위표현식을 후위표현식으로 변환
         for (String s : infixNotation) {
             if (s.matches("[0-9]")) {
                 postfixNotation.append(s);
@@ -72,6 +72,7 @@ class Solution {
         }
     }
 
+    // 후위식 계산
     static int runCalculatePostfixNotation() {
         Stack<Integer> stack = new Stack<>();
         String[] str = postfixNotation.toString().split("");
