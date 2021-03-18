@@ -20,8 +20,12 @@ public class MergeSort {
             System.out.print(integer + " ");
         }
         System.out.println();
-        System.out.println("정렬 후 => ");
+
+        System.out.println();
+
         list = mergeSort(list);
+        System.out.println();
+        System.out.println("정렬 후 => ");
         for(Integer integer: list) {
             System.out.print(integer + " ");
         }
@@ -42,6 +46,17 @@ public class MergeSort {
         }
 
         // List 의 크기가 1이 될 때까지 분할
+        System.out.print("left : ");
+        for(Integer integer: left) {
+            System.out.print(integer + " ");
+        }
+        System.out.println();
+        System.out.print("right : ");
+        for(Integer integer: right) {
+            System.out.print(integer + " ");
+        }
+        System.out.println();
+        System.out.println();
         left = mergeSort(left);
         right = mergeSort(right);
 
@@ -75,14 +90,12 @@ public class MergeSort {
             }
         }
 
-        return result;
-    }
-
-    static void printArr(String name, int[] arr) {
-        System.out.print(name + ":\t");
-        for (int i : arr) {
-            System.out.print(i + " ");
+        System.out.print("merge : ");
+        for(Integer integer: result) {
+            System.out.print(integer + " ");
         }
         System.out.println();
+        System.out.println();
+        return result;
     }
 }

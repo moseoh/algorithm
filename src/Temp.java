@@ -1,17 +1,28 @@
 package src;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 public class Temp {
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(1);
-        stack.push(1);
-        stack.push(1);
-        System.out.println(stack.size());
+        List<Integer> list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
 
-        while(!stack.isEmpty()) stack.pop();
-        System.out.println(stack.size());
+        for(Integer integer : list) {
+            System.out.print(integer + " ");
+        }
+        System.out.println();
 
+        list.add(1, 7);
+        list.add(1, 6);
+        list.add(1, 5);
+
+        for(Integer integer : list) {
+            System.out.print(integer + " ");
+        }
     }
 }
