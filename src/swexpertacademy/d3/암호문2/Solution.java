@@ -24,13 +24,13 @@ class Solution {
 
             length = Integer.parseInt(br.readLine());
             temp = br.readLine().split(" ");
-            for (int i = 0; i < temp.length;) {
-                if(temp[i].equals("I")) {
+            for (int i = 0; i < temp.length; ) {
+                if (temp[i].equals("I")) {
                     // 삽입할 위치와 암호문 받기
-                    int position = Integer.parseInt(temp[i+1]);
-                    int number = Integer.parseInt(temp[i+2]);
+                    int position = Integer.parseInt(temp[i + 1]);
+                    int number = Integer.parseInt(temp[i + 2]);
                     List<Integer> insertPassPhrase = new LinkedList<>();
-                    for(int k = i+3; k < i + 3 + number; k++){
+                    for (int k = i + 3; k < i + 3 + number; k++) {
                         insertPassPhrase.add(Integer.parseInt(temp[k]));
                     }
                     insert(position, insertPassPhrase, passPhrase);
@@ -38,19 +38,19 @@ class Solution {
                     i = i + 3 + number;
                     continue;
                 }
-                if(temp[i].equals("D")){
+                if (temp[i].equals("D")) {
                     // 삭제할 위치와 갯수 받기
-                    int position = Integer.parseInt(temp[i+1]);
-                    int number = Integer.parseInt(temp[i+2]);
+                    int position = Integer.parseInt(temp[i + 1]);
+                    int number = Integer.parseInt(temp[i + 2]);
                     delete(position, number, passPhrase);
                     i = i + 3;
                 }
             }
 
             // 열개만 출력
-            for(int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10; i++) {
                 sb.append(passPhrase.get(i));
-                if(i < 10 - 1 ) {
+                if (i < 10 - 1) {
                     sb.append(" ");
                 }
             }
@@ -61,12 +61,13 @@ class Solution {
     }
 
     static void insert(int position, List<Integer> insertPassPhrase, List<Integer> passPhrase) {
-        for(int i = insertPassPhrase.size()-1; i >= 0; i--){
+        for (int i = insertPassPhrase.size() - 1; i >= 0; i--) {
             passPhrase.add(position, insertPassPhrase.get(i));
         }
     }
+
     static void delete(int position, int number, List<Integer> passPhrase) {
-        while(number-- > 0) {
+        while (number-- > 0) {
             passPhrase.remove(position);
         }
     }
