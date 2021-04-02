@@ -26,7 +26,6 @@ public class 연속합 {
             else dp[i] = Math.max(num[i] + dp[i - 1], num[i]);
             max = Math.max(max,dp[i]);
         }
-
         System.out.println(max);
     }
 }
