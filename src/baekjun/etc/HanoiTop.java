@@ -16,7 +16,7 @@ public class HanoiTop {
 
     public static void hanoi(int num, int start, int mid, int to) {
         if (num == 1) {
-            sb.append(start + " " + to + "\n");
+            sb.append(start).append(" ").append(to).append("\n");
             return;
         }
 
