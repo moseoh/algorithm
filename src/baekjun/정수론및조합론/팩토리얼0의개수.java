@@ -7,27 +7,28 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 /**
- * 배수와약수
- * https://www.acmicpc.net/problem/5086
+ * 팩토리얼0의개수
+ * https://www.acmicpc.net/problem/1676
  * Github : http://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-05-29
+ * Created by azqazq195@gmail.com on 2021-05-31
  */
-public class 배수와약수 {
+public class 팩토리얼0의개수 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
+        int N = Integer.parseInt(br.readLine());
 
-        while (true) {
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            if (a == 0 && b == 0) break;
-
-            if (b % a == 0) bw.write("factor\n");
-            else if(a % b == 0) bw.write("multiple\n");
-            else bw.write("neither\n");
+        int count = 0;
+        for (int i = 1; i <= N; i++) {
+            if (i % 125 == 0)
+                count+=3;
+            else if (i % 25 == 0)
+                count+=2;
+            else if(i % 5 == 0)
+                count++;
         }
+
+        bw.write(String.valueOf(count));
         bw.flush();
         bw.close();
     }

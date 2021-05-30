@@ -4,31 +4,36 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * 배수와약수
- * https://www.acmicpc.net/problem/5086
+ * 약수
+ * https://www.acmicpc.net/problem/1037
  * Github : http://github.com/azqazq195
  * Created by azqazq195@gmail.com on 2021-05-29
  */
-public class 배수와약수 {
+public class 약수 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
 
-        while (true) {
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            if (a == 0 && b == 0) break;
+        int N = Integer.parseInt(br.readLine());
+        int[] num = new int[N];
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-            if (b % a == 0) bw.write("factor\n");
-            else if(a % b == 0) bw.write("multiple\n");
-            else bw.write("neither\n");
+        for (int i = 0; i < N; i++)
+            num[i] = Integer.parseInt(st.nextToken());
+
+        Arrays.sort(num);
+        int result;
+        if(N % 2 == 0) {
+            result = num[N/2-1] * num[N/2];
+        } else {
+            result = num[N/2] * num[N/2];
         }
-        bw.flush();
+
+        bw.write(String.valueOf(result));
         bw.close();
     }
 }
