@@ -8,9 +8,16 @@ package src;
  */
 public class Temp2 {
     public static void main(String[] args) {
-        int profit = 10;
-        int divide = profit / 10;
-        System.out.println(profit - divide);
-        System.out.println(divide);
+        String str = "test";
+        System.out.println(str == "test");
+        System.out.println(str.equals("test"));
+
+        System.out.println();
+        String str1 = "test";
+        String str2 = "test";
+        System.out.println(str1 == str2);
+        System.out.println(str1 == "test");
+        System.out.println(str1.equals(str2));
+        System.out.println(str1.equals("test"));
     }
 }
