@@ -27,7 +27,7 @@ public class ArrayStack {
 
     static int pop() {
         if(top == -1) {
-            System.out.println("Stack is Empty!!");
+            System.out.println("스택 is Empty!!");
             return 0;
         }
         else return stack[top--];
