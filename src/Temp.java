@@ -6,74 +6,34 @@ import java.util.*;
 
 class Temp {
     static class Solution {
-        static boolean[] check;
+        public int solution(int[] prices, int[] discounts) {
+            int answer = 0;
 
-        public int solution(int n, int[] v1, int[] v2, int[] num, int[] amount) {
-            check = new boolean[v1.length];
+            Integer[] pricesArr = Arrays.stream(prices).boxed().toArray(Integer[]::new);
+            Integer[] discountArr = Arrays.stream(discounts).boxed().toArray(Integer[]::new);
 
-            for (int i = 0; i < v1.length; i++) {
-                if (check[i]) continue;
-                check[i] = true;
+            Arrays.sort(pricesArr, Collections.reverseOrder());
+            Arrays.sort(discountArr, Collections.reverseOrder());
 
-                Set<Integer> set = new TreeSet<>();
-                set.add(v1[i]);
-                set.add(v2[i]);
-
-                int find = v1[i];
-                System.out.println("find : " + find);
-                while (true) {
-                    find = fun(find, v1, v2);
-                    System.out.println("find : " + find);
-                    if (find == -1) break;
-                    set.add(find);
-                }
-
-                find = v2[i];
-                int temp = find;
-                System.out.println("find : " + find);
-                while (true) {
-                    System.out.println("find : " + find);
-                    find = fun(find, v1, v2);
-                    if (find == -1) {
-                        break;
-                    }
-                    set.add(find);
-                }
-
-                System.out.println(i + " : " + set);
-
+            for (int i = 0; i < pricesArr.length; i++) {
+                if(i >= discountArr.length) break;
+                pricesArr[i] = discount(pricesArr[i], discountArr[i]);
             }
 
-            return 0;
+            for(Integer price : pricesArr) answer += price;
+
+            return answer;
         }
 
-        public static int fun(int find, int[] v1, int[] v2) {
-            int result = -1;
-
-            for (int i = 0; i < v1.length; i++) {
-                if (check[i]) continue;
-                if (find == v1[i]) {
-                    check[i] = true;
-                    return v2[i];
-                }
-                if (find == v2[i]) {
-                    check[i] = true;
-                    return v1[i];
-                }
-            }
-
-            return result;
+        public int discount(int price, int discount) {
+            return price * (100 - discount) / 100;
         }
     }
 
-
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int n = 10;
-        int[] v1 = {8, 4, 4, 1};
-        int[] v2 = {1, 10, 9, 4};
-        int[] num = {2, 5, 8, 6, 4, 1, 3, 10, 7, 4};
-        int[] amount = {3, -1, 3, 3, 1, -2, -4, 1, 2, -5};
-        System.out.println(solution.solution(n, v1, v2, num, amount));
+        int[] prices = {13000, 88000, 10000};
+        int[] discounts = {30, 20};
+        System.out.println(solution.solution(prices, discounts));
     }
 }
