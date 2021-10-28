@@ -25,7 +25,7 @@ public class ListStack {
 
     static void pop() {
         if (stack.size() == 0) {
-            System.out.println("Stack is Empty!!");
+            System.out.println("스택 is Empty!!");
         } else {
             int item = stack.get(stack.size() - 1);
             stack.remove(stack.size() - 1);
