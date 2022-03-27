@@ -1,7 +1,6 @@
 package programmers.level_1;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class 문자열_내_마음대로_정렬하기 {
