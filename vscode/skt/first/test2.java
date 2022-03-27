@@ -1,4 +1,4 @@
-package first;
+package skt.first;
 
 import java.util.Arrays;
 
