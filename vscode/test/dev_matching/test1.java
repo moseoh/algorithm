@@ -13,6 +13,7 @@ public class test1 {
     }
 
     static class Solution {
+        @SuppressWarnings("unchecked")
         public int[][] solution(int[][] dist) {
             List<Entry> suf = new ArrayList<>();
             List<Entry> pre = new ArrayList<>();
@@ -68,7 +69,7 @@ public class test1 {
         }
     }
 
-    static class Entry implements Comparable {
+    static class Entry implements Comparable<Entry> {
         int index;
         int length;
 
@@ -78,13 +79,13 @@ public class test1 {
         }
 
         @Override
-        public int compareTo(Object o) {
-            return this.length - ((Entry) o).length;
+        public String toString() {
+            return index + "";
         }
 
         @Override
-        public String toString() {
-            return index + "";
+        public int compareTo(Entry o) {
+            return this.length = o.length;
         }
     }
 }
