@@ -13,7 +13,6 @@ public class test1 {
     }
 
     static class Solution {
-        @SuppressWarnings("unchecked")
         public int[][] solution(int[][] dist) {
             List<Entry> suf = new ArrayList<>();
             List<Entry> pre = new ArrayList<>();
