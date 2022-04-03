@@ -1,4 +1,4 @@
-package skt.first;
+package test.skt.first;
 
 public class test3 {
     public static void main(String[] args) {

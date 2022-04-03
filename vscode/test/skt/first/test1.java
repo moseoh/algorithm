@@ -1,4 +1,4 @@
-package first;
+package test.skt.first;
 
 import java.util.ArrayList;
 import java.util.Collections;
