@@ -1,0 +1,35 @@
+-- 코드를 입력하세요
+SELECT
+    t1.MONTH,
+    t1.NAME,
+    t1.COUNT
+FROM
+(
+    SELECT
+        DATE_FORMAT(PR.CREATED_AT, '%m') AS 'MONTH',
+        P.NAME AS 'NAME',
+        COUNT(PR.PLACE_ID) AS 'COUNT'
+    FROM PLACES P
+    JOIN PLACE_REVIEWS PR ON P.ID = PR.PLACE_ID
+    WHERE PR.CREATED_AT BETWEEN '2018/01/01' AND '2018/12/31'
+    GROUP BY P.NAME, DATE_FORMAT(PR.CREATED_AT, '%m')
+    ORDER BY PR.CREATED_AT ASC
+) t1
+JOIN (
+    SELECT
+        t2.MONTH,
+        MAX(t2.COUNT) AS 'MAX'
+    FROM
+        (
+            SELECT  
+                DATE_FORMAT(PR.CREATED_AT, '%m') AS 'MONTH',
+                P.NAME AS 'NAME',
+                COUNT(PR.PLACE_ID) AS 'COUNT'
+            FROM PLACES P
+            JOIN PLACE_REVIEWS PR ON P.ID = PR.PLACE_ID
+            GROUP BY P.NAME, DATE_FORMAT(PR.CREATED_AT, '%m')
+        ) t2
+    GROUP BY t2.MONTH, t2.NAME
+    ORDER BY t2.MONTH
+) t3 on t1.COUNT = t3.MAX AND t1.MONTH = t3.MONTH
+;
