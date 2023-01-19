@@ -13,6 +13,9 @@ public class Solution {
 
     public static int solution(int n, int s, int a, int b, int[][] fares) {
         int answer = 0;
+        for (int i = 0; i < (1 << 3); i++) {
+            System.out.println(i);
+        }
         return answer;
     }
 }
