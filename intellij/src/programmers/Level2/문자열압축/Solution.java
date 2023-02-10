@@ -1,4 +1,4 @@
-package src.programmers.Level2.문자열_압축;
+package src.programmers.Level2.문자열압축;
 
 public class Solution {
     public static void main(String[] args) {

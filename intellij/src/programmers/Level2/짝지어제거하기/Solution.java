@@ -1,4 +1,4 @@
-package src.programmers.Level2.짝지어_제거하기;
+package src.programmers.Level2.짝지어제거하기;
 
 import java.util.Stack;
 

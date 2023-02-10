@@ -1,4 +1,4 @@
-package src.programmers.Level2.괄호_변환;
+package src.programmers.Level2.괄호변환;
 
 public class Solution {
     public static void main(String[] args) {

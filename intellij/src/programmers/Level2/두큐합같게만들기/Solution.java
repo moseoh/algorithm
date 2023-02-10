@@ -1,4 +1,4 @@
-package src.programmers.Level2.두_큐_합_같게_만들기;
+package src.programmers.Level2.두큐합같게만들기;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -24,7 +24,7 @@ public class Solution {
             sum2 += queue2[i];
         }
 
-        while(sum1 != sum2) {
+        while (sum1 != sum2) {
             count++;
             if (sum1 > sum2) {
                 sum1 -= que1.peek();

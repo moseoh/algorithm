@@ -1,4 +1,4 @@
-package src.programmers.Level2.올바른_괄호;
+package src.programmers.Level2.올바른괄호;
 
 public class Solution {
     public static void main(String[] args) {
