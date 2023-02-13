@@ -30,12 +30,7 @@ public class 최대공약수와최소공배수 {
     }
 
     static int gcd(int a, int b) {
-        while (a != 0) {
-            int r = b % a;
-            b = a;
-            a = r;
-        }
-        return b;
+        return b == 0 ? a : gcd(b, a % b);
     }
 
     static int lcm(int a, int b) {
