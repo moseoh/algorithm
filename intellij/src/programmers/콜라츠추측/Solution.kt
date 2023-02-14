@@ -1,4 +1,4 @@
-package src.programmers.etc.콜라츠추측
+package src.programmers.콜라츠추측
 
 fun main(args: Array<String>) {
     val n = 16

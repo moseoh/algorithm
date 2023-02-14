@@ -30,6 +30,12 @@ public class 최대공약수와최소공배수 {
     }
 
     static int gcd(int a, int b) {
+        int cnt = 0;
+        for (int i = 1; i * i <= 100; i++) {
+            if (i * i == 100) cnt++;
+            else if (100 % i == 0) cnt += 2;
+        }
+
         return b == 0 ? a : gcd(b, a % b);
     }
 

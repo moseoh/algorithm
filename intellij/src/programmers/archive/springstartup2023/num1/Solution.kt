@@ -1,4 +1,4 @@
-package src.programmers.test.num1
+package src.programmers.archive.springstartup2023.num1
 
 fun main(args: Array<String>) {
     val lotteries = arrayOf(intArrayOf(10, 19, 800), intArrayOf(20, 39, 200), intArrayOf(100, 199, 500))

@@ -1,4 +1,4 @@
-package src.programmers.test.num2
+package src.programmers.archive.springstartup2023.num2
 
 fun main(args: Array<String>) {
     val grid = arrayOf(".....####", "..#...###", ".#.##..##", "..#..#...", "..#...#..", "...###...")

@@ -1,6 +1,4 @@
-package src.programmers.test.num3
-
-import javax.swing.text.StyledEditorKit.BoldAction
+package src.programmers.archive.springstartup2023.num3
 
 fun main(args: Array<String>) {
     val queries = arrayOf(intArrayOf(2, 0), intArrayOf(3, 1))

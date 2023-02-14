@@ -1,4 +1,4 @@
-package src.programmers.etc.피자나눠먹기2
+package src.programmers.level0.피자나눠먹기2
 
 fun main(args: Array<String>) {
     val n = 10
