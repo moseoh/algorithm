@@ -1,4 +1,4 @@
-package src.programmers.archive.socar.temp2
+package src.programmers.archive.socar.test2
 
 fun main(args: Array<String>) {
     val rectangles = arrayOf(
