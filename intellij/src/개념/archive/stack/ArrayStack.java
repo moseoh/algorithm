@@ -1,4 +1,4 @@
-package src.개념.stack;
+package src.개념.archive.stack;
 
 public class ArrayStack {
     static int[] stack = new int[100];
@@ -19,17 +19,16 @@ public class ArrayStack {
         System.out.println("pop item => " + item);
     }
 
-    static void push(int item){
+    static void push(int item) {
         if (top < 99) {
             stack[++top] = item;
         }
     }
 
     static int pop() {
-        if(top == -1) {
+        if (top == -1) {
             System.out.println("스택 is Empty!!");
             return 0;
-        }
-        else return stack[top--];
+        } else return stack[top--];
     }
 }

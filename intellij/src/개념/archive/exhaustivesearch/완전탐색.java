@@ -1,4 +1,4 @@
-package src.개념.exhaustivesearch;
+package src.개념.archive.exhaustivesearch;
 
 import java.io.BufferedReader;
 import java.io.IOException;

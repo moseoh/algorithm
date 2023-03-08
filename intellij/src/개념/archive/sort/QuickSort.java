@@ -1,12 +1,12 @@
-package src.개념.sort;
+package src.개념.archive.sort;
 
 public class QuickSort {
-//    static String test = "1 5 4 -1 0 55 55 32 48 6 41 15 23 35 22";
+    //    static String test = "1 5 4 -1 0 55 55 32 48 6 41 15 23 35 22";
     static String test = "1 5 4 -1 0 55 55 32 48 6 41 15 23 35 22 111 100 125 26 487 -5 -15 -15 -12 54 885 12 111 32 518";
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        
+
         String[] tempString = test.split(" ");
         int[] num = new int[tempString.length];
         int[] result = new int[tempString.length];
@@ -17,7 +17,7 @@ public class QuickSort {
 
         printArray(num);
         int sortCount = 0;
-        while(sortCount < isSorted.length){
+        while (sortCount < isSorted.length) {
             // 정렬이 안된 배열 찾기
             int startIndex = -1;
             int endIndex = -1;

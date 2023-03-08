@@ -1,4 +1,4 @@
-package src.개념.stack;
+package src.개념.archive.stack;
 
 import java.util.ArrayList;
 

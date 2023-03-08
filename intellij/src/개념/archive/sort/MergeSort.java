@@ -1,4 +1,4 @@
-package src.개념.sort;
+package src.개념.archive.sort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class MergeSort {
         list.add(22);
 
         System.out.println("정렬 전 => ");
-        for(Integer integer: list) {
+        for (Integer integer : list) {
             System.out.print(integer + " ");
         }
         System.out.println();
@@ -26,7 +26,7 @@ public class MergeSort {
         list = mergeSort(list);
         System.out.println();
         System.out.println("정렬 후 => ");
-        for(Integer integer: list) {
+        for (Integer integer : list) {
             System.out.print(integer + " ");
         }
     }
@@ -47,12 +47,12 @@ public class MergeSort {
 
         // List 의 크기가 1이 될 때까지 분할
         System.out.print("left : ");
-        for(Integer integer: left) {
+        for (Integer integer : left) {
             System.out.print(integer + " ");
         }
         System.out.println();
         System.out.print("right : ");
-        for(Integer integer: right) {
+        for (Integer integer : right) {
             System.out.print(integer + " ");
         }
         System.out.println();
@@ -67,8 +67,8 @@ public class MergeSort {
     static List<Integer> merge(List<Integer> left, List<Integer> right) {
         List<Integer> result = new ArrayList<>();
 
-        while(left.size() > 0 && right.size() > 0){
-            if(left.get(0) <= right.get(0)){
+        while (left.size() > 0 && right.size() > 0) {
+            if (left.get(0) <= right.get(0)) {
                 result.add(left.get(0));
                 left.remove(0);
             } else {
@@ -77,21 +77,21 @@ public class MergeSort {
             }
         }
 
-        if(left.size() >0){
-            while(left.size() > 0) {
+        if (left.size() > 0) {
+            while (left.size() > 0) {
                 result.add(left.get(0));
                 left.remove(0);
             }
         }
-        if(right.size() >0){
-            while(right.size() > 0) {
+        if (right.size() > 0) {
+            while (right.size() > 0) {
                 result.add(right.get(0));
                 right.remove(0);
             }
         }
 
         System.out.print("merge : ");
-        for(Integer integer: result) {
+        for (Integer integer : result) {
             System.out.print(integer + " ");
         }
         System.out.println();

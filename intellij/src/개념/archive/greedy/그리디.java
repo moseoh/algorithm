@@ -1,4 +1,4 @@
-package src.개념.greedy;
+package src.개념.archive.greedy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,23 +21,23 @@ public class 그리디 {
 
         // run 혹은 triplete 구분
         // run
-        for (int i = 0; i < countArray.length-2;) {
+        for (int i = 0; i < countArray.length - 2; ) {
             if (
                     countArray[i] != 0 &&
                             countArray[i + 1] != 0 &&
                             countArray[i + 2] != 0
             ) {
                 countArray[i]--;
-                countArray[i+1]--;
-                countArray[i+2]--;
+                countArray[i + 1]--;
+                countArray[i + 2]--;
                 System.out.println("run: " + i);
             } else {
                 i++;
             }
         }
 
-        for(int i=0; i< countArray.length;){
-            if(countArray[i]>=3) {
+        for (int i = 0; i < countArray.length; ) {
+            if (countArray[i] >= 3) {
                 countArray[i] -= 3;
                 System.out.println("triplete: " + i);
             } else {

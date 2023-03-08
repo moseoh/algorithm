@@ -1,4 +1,4 @@
-package src.개념.부분집합;
+package src.개념.archive.부분집합;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

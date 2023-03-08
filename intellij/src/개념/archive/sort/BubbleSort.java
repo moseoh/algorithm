@@ -1,4 +1,4 @@
-package src.개념.sort;
+package src.개념.archive.sort;
 
 public class BubbleSort {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class BubbleSort {
     static void bubbleSortASC(int[] arr) {
         System.out.println("Start");
         printArr(arr);
-        for( int x = arr.length; x > 0; x--){
+        for (int x = arr.length; x > 0; x--) {
             for (int i = 0; i < x - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
                     int temp = arr[i];

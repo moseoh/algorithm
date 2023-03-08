@@ -1,4 +1,4 @@
-package src.개념.분할정복;
+package src.개념.archive.분할정복;
 
 public class Power {
     public static void main(String[] args) {

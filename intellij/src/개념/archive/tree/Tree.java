@@ -1,4 +1,4 @@
-package src.개념.tree;
+package src.개념.archive.tree;
 
 import java.util.Scanner;
 
@@ -41,12 +41,12 @@ class TreeOrder {
         // 도착한 노드가 null 이면 재귀 종료 - 찾을(삽입할) 노드 x
         if (node != null) {
             // 들어갈 위치를 찾았다면
-            if (node.data == data){
+            if (node.data == data) {
                 // -1 이 아니고 값이 있는 경우, 좌우 노드 생성
-                if(leftData != -1) {
+                if (leftData != -1) {
                     node.left = new Node(leftData);
                 }
-                if(rightData != -1){
+                if (rightData != -1) {
                     node.right = new Node(rightData);
                 }
             } else {
@@ -61,27 +61,27 @@ class TreeOrder {
 
     //전위순회 Preorder : Root -> Left -> Right
     public void preOrder(Node node) {
-        if(node != null) {
+        if (node != null) {
             System.out.print(node.data + " ");
-            if(node.left != null) preOrder(node.left);
-            if(node.right != null) preOrder(node.right);
+            if (node.left != null) preOrder(node.left);
+            if (node.right != null) preOrder(node.right);
         }
     }
 
     //중위 순회 Inorder : Left -> Root -> Right
     public void inOrder(Node node) {
-        if(node != null) {
-            if(node.left != null) inOrder(node.left);
+        if (node != null) {
+            if (node.left != null) inOrder(node.left);
             System.out.print(node.data + " ");
-            if(node.right != null) inOrder(node.right);
+            if (node.right != null) inOrder(node.right);
         }
     }
 
     //후위순회 Postorder : Left -> Right -> Root
     public void postOrder(Node node) {
-        if(node != null) {
-            if(node.left != null) postOrder(node.left);
-            if(node.right != null) postOrder(node.right);
+        if (node != null) {
+            if (node.left != null) postOrder(node.left);
+            if (node.right != null) postOrder(node.right);
             System.out.print(node.data + " ");
         }
     }
