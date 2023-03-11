@@ -1,4 +1,4 @@
-package src.programmers.기사단원의무기
+package src.programmers.temp.기사단원의무기
 
 fun main(args: Array<String>) {
     val number = 5

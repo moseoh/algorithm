@@ -1,4 +1,4 @@
-package src.programmers.푸드파이트대회
+package src.programmers.temp.푸드파이트대회
 
 fun main(args: Array<String>) {
     val food = intArrayOf(1, 7, 1, 2)

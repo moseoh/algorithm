@@ -1,4 +1,4 @@
-package src.programmers.이상한문자만들기
+package src.programmers.temp.이상한문자만들기
 
 fun main(args: Array<String>) {
     val s = "try hello world"

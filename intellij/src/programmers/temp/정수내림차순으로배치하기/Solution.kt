@@ -1,4 +1,4 @@
-package src.programmers.정수내림차순으로배치하기
+package src.programmers.temp.정수내림차순으로배치하기
 
 fun main(args: Array<String>) {
     val n = 118372L

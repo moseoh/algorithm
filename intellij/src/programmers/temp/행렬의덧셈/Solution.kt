@@ -1,4 +1,4 @@
-package src.programmers.행렬의덧셈
+package src.programmers.temp.행렬의덧셈
 
 fun main(args: Array<String>) {
     val arr1 = arrayOf(intArrayOf(1, 2), intArrayOf(2, 3))
