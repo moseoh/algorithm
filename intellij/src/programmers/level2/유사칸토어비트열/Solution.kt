@@ -2,7 +2,6 @@ package src.programmers.level2.유사칸토어비트열
 
 import kotlin.math.pow
 
-
 fun main(args: Array<String>) {
     val n = 3
     val l = 1L
