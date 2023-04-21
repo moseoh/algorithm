@@ -39,24 +39,19 @@ fun main() {
 }
 
 class Solution {
+    val array = arrayOf("A", "E", "I", "O", "U")
+    val result = mutableListOf<String>()
+
     fun solution(word: String): Int {
-        val char = arrayOf("", "A", "E", "I", "O", "U")
-        dfs(char)
-        list.sort()
-        return list.indexOf(word) + 1
+        dfs()
+        return result.indexOf(word)
     }
 
-    val list = mutableListOf<String>()
-    fun dfs(array: Array<String>, depth: Int = 0, str: String = "") {
-        if (depth == 5) {
-            if (str.isNotBlank() && !list.contains(str)) {
-                list.add(str)
-            }
-            return
-        }
-
+    fun dfs(str: String = "") {
+        if (str.length > 5) return
+        result.add(str)
         for (char in array) {
-            dfs(array, depth + 1, str + char)
+            dfs(str + char)
         }
     }
 }
