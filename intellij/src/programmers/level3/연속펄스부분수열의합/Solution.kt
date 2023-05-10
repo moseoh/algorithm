@@ -36,4 +36,4 @@ class Solution {
     private fun getPluseArray(array: IntArray, first: Int): IntArray {
         return array.mapIndexed { index, i -> if (index % 2 == first) i else i * -1 }.toIntArray()
     }
-}합
+}
