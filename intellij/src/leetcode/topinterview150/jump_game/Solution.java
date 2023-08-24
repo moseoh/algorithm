@@ -9,9 +9,8 @@ class Solution {
     }
 
     public boolean canJump(int[] nums) {
-        int length = nums.length;
-        int index = length - 1;
-        for (int i = length - 1; i >= 0; i--) {
+        int index = nums.length - 1;
+        for (int i = index; i >= 0; i--) {
             if (nums[i] + i >= index) {
                 index = i;
             }
