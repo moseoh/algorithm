@@ -37,7 +37,6 @@ class Solution {
             while (sum >= target) {
                 result = Math.min(result, end - start);
                 sum -= nums[start++];
-                System.out.println("start: " + start + ", end: " + end);
             }
         }
 
