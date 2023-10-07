@@ -6,8 +6,8 @@ import java.util.*
 import kotlin.math.max
 
 
-const val NULL = Int.MIN_VALUE
-const val IS_NOT_VISITED = Int.MAX_VALUE
+private const val NULL = Int.MIN_VALUE
+private const val IS_NOT_VISITED = Int.MAX_VALUE
 
 fun main(args: Array<String>) = with(BufferedReader(InputStreamReader(System.`in`))) {
     val st = StringTokenizer(readLine())
