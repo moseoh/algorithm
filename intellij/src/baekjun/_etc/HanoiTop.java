@@ -1,9 +1,10 @@
-package src.baekjun.etc;
+package src.baekjun._etc;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class HanoiTop {
+
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws Exception {
