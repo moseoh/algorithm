@@ -1,15 +1,14 @@
-package src.baekjun.동적계획법;
+package src.baekjun.다이나믹_프로그래밍;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * LCS
- * https://www.acmicpc.net/problem/9251
- * Github : https://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-04-01
+ * LCS https://www.acmicpc.net/problem/9251 Github : https://github.com/azqazq195 Created by
+ * azqazq195@gmail.com on 2021-04-01
  */
 public class LCS {
+
     static String str1, str2;
     //    static Integer[][] dp;
     static int[][] dp;
@@ -23,10 +22,10 @@ public class LCS {
 
         for (int i = 1; i <= str1.length(); i++) {
             for (int k = 1; k <= str2.length(); k++) {
-                if(str1.charAt(i-1) == str2.charAt(k-1)) {
-                    dp[i][k] = dp[i-1][k-1] + 1;
+                if (str1.charAt(i - 1) == str2.charAt(k - 1)) {
+                    dp[i][k] = dp[i - 1][k - 1] + 1;
                 } else {
-                    dp[i][k] = Math.max(dp[i-1][k], dp[i][k-1]);
+                    dp[i][k] = Math.max(dp[i - 1][k], dp[i][k - 1]);
                 }
             }
         }

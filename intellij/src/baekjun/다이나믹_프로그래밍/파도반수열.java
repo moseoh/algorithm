@@ -1,15 +1,14 @@
-package src.baekjun.동적계획법;
+package src.baekjun.다이나믹_프로그래밍;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * 파도반수열
- * https://www.acmicpc.net/problem/9461
- * Github : https://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-03-31
+ * 파도반수열 https://www.acmicpc.net/problem/9461 Github : https://github.com/azqazq195 Created by
+ * azqazq195@gmail.com on 2021-03-31
  */
 public class 파도반수열 {
+
     static long[] ans = new long[101];
 
     public static void main(String[] args) throws Exception {

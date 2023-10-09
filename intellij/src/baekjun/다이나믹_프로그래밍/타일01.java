@@ -1,16 +1,15 @@
-package src.baekjun.동적계획법;
+package src.baekjun.다이나믹_프로그래밍;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * 타일01
- * https://www.acmicpc.net/problem/1904
- * Github : https://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-03-31
+ * 타일01 https://www.acmicpc.net/problem/1904 Github : https://github.com/azqazq195 Created by
+ * azqazq195@gmail.com on 2021-03-31
  */
 
 public class 타일01 {
+
     static int N;
 
     public static void main(String[] args) throws Exception {

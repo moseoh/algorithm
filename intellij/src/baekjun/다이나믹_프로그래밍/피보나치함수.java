@@ -1,15 +1,15 @@
-package src.baekjun.동적계획법;
+package src.baekjun.다이나믹_프로그래밍;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * 피보나치함수
- * https://www.acmicpc.net/problem/1003
- * Github : https://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-03-30
+ * 피보나치함수 https://www.acmicpc.net/problem/1003 Github : https://github.com/azqazq195 Created by
+ * azqazq195@gmail.com on 2021-03-30
  */
 
 public class 피보나치함수 {
+
     static int[][] cnt = new int[41][2];
     static int N;
 

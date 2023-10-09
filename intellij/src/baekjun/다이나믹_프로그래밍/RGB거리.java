@@ -1,14 +1,12 @@
-package src.baekjun.동적계획법;
+package src.baekjun.다이나믹_프로그래밍;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * RGB거리
- * https://www.acmicpc.net/problem/1149
- * Github : https://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-03-31
+ * RGB거리 https://www.acmicpc.net/problem/1149 Github : https://github.com/azqazq195 Created by
+ * azqazq195@gmail.com on 2021-03-31
  */
 public class RGB거리 {
 
@@ -23,7 +21,6 @@ public class RGB거리 {
             Cost[i][1] = Integer.parseInt(st.nextToken());
             Cost[i][2] = Integer.parseInt(st.nextToken());
         }
-
 
         // 1부터 N-1까지 각 i별 i-1의 서로 다른 색상 중 최솟값을 누적하여 더한다.
         for (int i = 1; i < N; i++) {

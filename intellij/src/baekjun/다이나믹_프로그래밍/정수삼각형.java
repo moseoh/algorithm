@@ -1,16 +1,15 @@
-package src.baekjun.동적계획법;
+package src.baekjun.다이나믹_프로그래밍;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * 정수삼각형
- * https://www.acmicpc.net/problem/1932
- * Github : https://github.com/azqazq195
- * Created by azqazq195@gmail.com on 2021-03-31
+ * 정수삼각형 https://www.acmicpc.net/problem/1932 Github : https://github.com/azqazq195 Created by
+ * azqazq195@gmail.com on 2021-03-31
  */
 public class 정수삼각형 {
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
