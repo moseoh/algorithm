@@ -25,7 +25,7 @@ public class 나무_자르기 {
         int right = max;
 
         while (left < right) {
-            int mid = (right + left) >> 1;
+            int mid = (right + left) / 2;
             if (isPossible(trees, mid, score)) {
                 left = mid + 1;
             } else {
