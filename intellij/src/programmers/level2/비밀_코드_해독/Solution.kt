@@ -28,7 +28,27 @@ fun main() {
 
 class Solution {
     fun solution(n: Int, q: Array<IntArray>, ans: IntArray): Int {
-        var answer: Int = 0
-        return answer
+        val answers = q.map { it.toSet() }
+        var count: Int = 0
+
+        fun backtrack(start: Int, current: MutableList<Int>) {
+            if (current.size == 5) {
+                for ((i, a) in answers.withIndex()) {
+                    if (current.count { it in a } != ans[i]) return
+                }
+                count++
+                return
+            }
+
+            for (num in start..n) {
+                current.add(num)
+                backtrack(num + 1, current)
+                current.removeLast()
+            }
+        }
+
+        backtrack(1, mutableListOf())
+        return count
     }
+
 }
