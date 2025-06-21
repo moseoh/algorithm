@@ -1,5 +1,7 @@
 package src.programmers.level2.서버_증설_횟수
 
+import kotlin.math.max
+
 fun main() {
     fun printResult(index: Int, result: Int, answer: Int) {
         val correct = result == answer
@@ -35,7 +37,25 @@ fun main() {
 
 class Solution {
     fun solution(players: IntArray, m: Int, k: Int): Int {
+        val length = players.size
+        val servers = IntArray(length) { 0 }
+
         var answer: Int = 0
+        for (i in 0 until length) {
+            var needServerCount = players[i] / m
+
+            for (j in max(0, i - k + 1)..i) {
+                needServerCount -= servers[j]
+                if (needServerCount <= 0) break
+            }
+
+            if (needServerCount <= 0) {
+                continue
+            }
+            answer += needServerCount
+            servers[i] = needServerCount
+        }
+
         return answer
     }
 }
